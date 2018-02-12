@@ -7,8 +7,8 @@
 Используется Pug шаблон с инклюдами, шаблонами, миксинами т переменными.
 Выдержана HTML5 разметка и семантика. Валидатор W3C не обнаружил ошибок.
 
-![preview](https://github.com/Amaster-eu/Siteplus-Test/blob/master/src/img/intro.jpg)
-![compatibility](https://github.com/Amaster-eu/Siteplus-Test/blob/master/src/img/compatible-3.jpg)
+![preview](https://github.com/Amaster-eu/pug-Siteplus/blob/master/src/img/intro.jpg)
+![compatibility](https://github.com/Amaster-eu/pug-Siteplus/blob/master/src/img/compatible-4.jpg)
 
 <p align="center">
   <a href="https://github.com/Amaster-eu/pug-Siteplus"><img src="https://github.com/Amaster-eu/pug-Siteplus/blob/master/src/img/language-en-inactive.png" /></a><a href="https://github.com/Amaster-eu/pug-Siteplus/blob/master/README_RU.md#top"><img src="https://github.com/Amaster-eu/pug-Siteplus/blob/master/src/img/language-ru-active.png" /></a>
@@ -23,9 +23,9 @@
 ## Комментарии к макету
 
 - слайдер #1: при слайде первое изображение исчезает, след. - смещается на его позиции и увеличивается, описание меняется, пагинация переключается
-![pic](https://github.com/Amaster-eu/Siteplus-Test/blob/master/src/img/slider-big.gif)
+![pic](https://github.com/Amaster-eu/pug-Siteplus/blob/master/src/img/slider-big.gif)
 - слайдер #2: логотипы компаний скролятся автоматически:
-![pic](https://github.com/Amaster-eu/Siteplus-Test/blob/master/src/img/slider-small.gif)
+![pic](https://github.com/Amaster-eu/pug-Siteplus/blob/master/src/img/slider-small.gif)
 - добавлена анимация элементов и параллакс-эффект
 - применяются npm-пакеты: gulp-autoprefixer, gulp-sourcemaps, gulp-modernizr.
 
@@ -35,8 +35,8 @@
 
 - Откройте терминал.
 - `cd /YOUR-FOLDER`: измените рабочий каталог, где вы хотите создать клонированную директорию.
-- `git clone https://github.com/Amaster-eu/Siteplus-Test`: клонирование текущего репозитория.
-- `cd Siteplus-Test`: переход в папку проекта.
+- `git clone https://github.com/Amaster-eu/pug-Siteplus`: клонирование текущего репозитория.
+- `cd pug-Siteplus`: переход в папку проекта.
 - `npm i`: установка зависимых пакетов.
 - `npm run start`: сборка проекта в папке **build** и запуск сервера по адресу [http://localhost:3000/](http://localhost:3000/) с открытием страницы проекта в браузере.
 
