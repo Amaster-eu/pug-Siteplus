@@ -1,0 +1,47 @@
+{
+  "name": "Siteplus_Test",
+  "description": "Siteplus Test Project",
+  "version": "1.0.0",
+  "author": "Amaster <amaster.eu>",
+  "repository": "https://github.com/Amaster-eu/Siteplus-Test/",
+  "license": "MIT",
+  "scripts": {
+    "start": "gulp",
+    "build": "gulp build"
+  },
+  "config": {
+    "src": {
+      "baseDir": "src/",
+      "pug": "src/pages/",
+      "scss": "src/scss/",
+      "js": "src/js/",
+      "img": "src/img/"
+    },
+    "build": {
+      "baseDir": "build/",
+      "css": "build/css/",
+      "js": "build/js/",
+      "img": "build/img/"
+    }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
+  ],
+  "devDependencies": {
+    "autoprefixer": "^7.2.4",
+    "browser-sync": "^2.23.5",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-data": "^1.3.1",
+    "gulp-delete-file": "^1.0.2",
+    "gulp-postcss": "^7.0.1",
+    "gulp-pug": "^3.3.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.3.2",
+    "gulp-sourcemaps": "^2.6.3",
+    "gulp-uglify": "^3.0.0",
+    "require-dir": "^0.3.2",
+    "run-sequence": "^2.2.1"
+  }
+}

@@ -1,0 +1,1025 @@
+@import "includes/us-base";
+@import "includes/mixin";
+@import "includes/animate";
+
+/* ==========================================================================
+  Theme Settings
+  ========================================================================== */
+
+$font-normal:         400 normal 1em 'Open Sans',sans-serif;
+$font-bold:           800 normal 5vw 'Raleway',sans-serif;
+$theme-color:         rgb(248, 68, 68);
+$white-color:         rgb(255, 255, 255);
+$black-color:         rgb(44, 46, 55);
+$black-inner-color:   rgb(181, 181, 181);
+$grey-color:          rgb(240, 240, 240);
+$grey-inner-color:    rgb(76, 78, 85);
+$text-color:          rgb(148, 148, 148);
+
+/* ==========================================================================
+  Media Queries For Visible Elements
+  ========================================================================== */
+
+$format:              screen;
+$mobile:              320px;
+$tablet:              750px;
+$desktop:             1024px;
+$full:                1440px;
+
+/* Table of Content
+==================================================
+  1. Theme
+  2. Flexbox Grid
+  3. Preloader
+  4. Main Menu
+  5. Section - Hero
+  6. Section - Topic: Team Of Creatives
+  7. Section - Latest Projects
+  8. Section - Blog
+  9. Section - Profiles
+  10. Section - Logos
+  11. Footer
+  12. Slider
+  13. Button
+  14. Form
+*/
+
+
+/* ==========================================================================
+  1. Main
+  ========================================================================== */
+
+body {
+  margin: 0;
+  font: $font-normal;
+  font-size: 100%;
+  line-height: 1.5;
+  color: #000;
+  background-color: #fff;
+}
+
+main {
+  position: relative;
+}
+
+section,
+.section {
+  padding: 5.1em 0 1em;
+  @media #{$format} {
+    @media (min-width: $full) {
+      & {
+        padding:9em 0 1em;
+      }
+    }
+  }
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0 12%;
+  padding: 0;
+  font: $font-bold;
+  text-align: center;
+  text-transform: uppercase;
+  & span {
+    display: block;
+  }
+  @media #{$format} {
+    @media (min-width: $desktop) {
+      & {
+        font-size: 1.625em;
+      }
+    }
+  }
+}
+
+h2:before {
+  display: block;
+  width: 163px;
+  height: 15px;
+  margin: 0 auto 1.05em;
+  content: '';
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 81 7"><path fill-rule="evenodd" opacity="0.2" fill="rgb(25, 25, 25)" d="M70.541,7.000 L65.534,1.838 L60.527,7.000 L55.520,1.838 L50.514,7.000 L45.507,1.838 L40.500,7.000 L35.493,1.838 L30.486,7.000 L25.480,1.838 L20.473,7.000 L15.466,1.838 L10.459,7.000 L5.453,1.838 L0.891,6.539 L-0.000,5.621 L5.453,-0.000 L10.459,5.162 L15.466,-0.000 L20.473,5.162 L25.480,-0.000 L30.486,5.162 L35.493,-0.000 L40.500,5.162 L45.507,-0.000 L50.514,5.162 L55.520,-0.000 L60.527,5.162 L65.534,-0.000 L70.541,5.162 L75.547,-0.000 L81.000,5.621 L80.108,6.539 L75.547,1.838 L70.541,7.000 Z"></path></svg>') center center no-repeat;
+  @media #{$format} {
+    @media (min-width: $desktop) {
+      & {
+        width:81px;
+        height: 7px;
+      }
+    }
+  }
+}
+
+h3 {
+  margin: 2.6em 1em 0.4em;
+}
+
+p {
+  margin: 1em 2.8em 4.5em;
+  font: $font-normal;
+  line-height: 1.45;
+  text-align: center;
+  color: $text-color;
+}
+
+@media #{$format} {
+  @media (min-width: $tablet) {
+    p {
+      font-size: 1.5em;
+    }
+  }
+  @media (min-width: $desktop) {
+    h3 {
+      text-align: left;
+      margin: 5.8em 1em 0.4em 4em;
+      font-size: 1.5em;
+    }
+    p {
+      text-align: left;
+      margin: 1em 1em 0.4em 6em;
+      font-size: 14px;
+      line-height: 1.8;
+    }
+    hr:not(.vertical) {
+      display: none;
+    }
+  }
+}
+
+img {
+  width: 100%;
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.text {
+  margin-top: 7em;
+}
+
+
+/* Social */
+
+.social {
+  margin: 3.8em 0 1.6em;
+  li {
+    display: inline-block;
+    margin-right: 36px;
+  }
+}
+
+.icon-facebook {
+  display: block;
+  width: 16px;
+  height: 33px;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 16"><path opacity="0.4" fill="rgb(0, 0, 0)" d="M4.942,16.014 L1.642,16.014 L1.642,8.001 L-0.008,8.001 L-0.008,5.237 L1.642,5.237 L1.642,3.580 C1.642,1.327 2.573,-0.013 5.218,-0.013 L7.421,-0.013 L7.421,2.749 L6.045,2.749 C5.014,2.749 4.946,3.135 4.946,3.856 L4.942,5.237 L7.437,5.237 L7.145,8.001 L4.942,8.001 L4.942,16.014 Z"></path></svg>') center center no-repeat;
+}
+
+.icon-twitter {
+  display: block;
+  width: 36px;
+  height: 30px;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 16"><path opacity="0.4" fill="rgb(0, 0, 0)" d="M18.012,2.545 C17.368,2.833 16.676,3.027 15.949,3.113 C16.691,2.667 17.261,1.960 17.529,1.117 C16.834,1.531 16.066,1.830 15.247,1.993 C14.592,1.291 13.659,0.854 12.625,0.854 C10.641,0.854 9.033,2.468 9.033,4.462 C9.033,4.744 9.065,5.020 9.126,5.285 C6.141,5.134 3.494,3.697 1.722,1.514 C1.413,2.047 1.236,2.667 1.236,3.328 C1.236,4.580 1.870,5.684 2.834,6.331 C2.245,6.313 1.691,6.151 1.207,5.880 C1.207,5.895 1.207,5.910 1.207,5.925 C1.207,7.674 2.445,9.133 4.088,9.463 C3.787,9.546 3.469,9.590 3.142,9.590 C2.910,9.590 2.685,9.568 2.466,9.525 C2.923,10.959 4.250,12.002 5.821,12.031 C4.592,12.999 3.043,13.576 1.360,13.576 C1.070,13.576 0.784,13.559 0.503,13.526 C2.093,14.549 3.981,15.147 6.010,15.147 C12.617,15.147 16.230,9.648 16.230,4.880 C16.230,4.723 16.227,4.568 16.220,4.413 C16.922,3.904 17.531,3.270 18.012,2.545 Z"></path></svg>') center center no-repeat;
+  background-size: 36px;
+}
+
+
+/* States */
+
+.is-hidden {
+  @include visual-hide;
+}
+
+.parallax {
+  background-repeat: no-repeat;
+  background-attachment: fixed !important;
+  background-position: center center;
+  background-size: cover;
+}
+
+
+/* ==========================================================================
+  2. Flexbox Grid
+  ========================================================================== */
+
+.flex {
+  display: flex;
+  flex-flow: row wrap;
+  >* {
+    width: 100%;
+    flex: 1 100%;
+  }
+}
+
+.container {
+  padding: 0;
+}
+
+
+/* ==========================================================================
+  3. Preloader
+  ========================================================================== */
+
+.spn_hol {
+  position: fixed;
+  z-index: 50000;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transition: all 1s;
+  opacity: 1;
+  background: #fff;
+}
+
+.spinner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  width: 70px;
+  height: 24px;
+  margin-top: -12px;
+  margin-left: -35px;
+  text-align: center;
+}
+
+.spinner>div {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  animation: bouncedelay 1.4s infinite ease-in-out;
+  border-radius: 100%;
+  background-color: #333;
+  animation-fill-mode: both;
+}
+
+.spinner .bounce1 {
+  animation-delay: -0.32s;
+}
+
+.spinner .bounce2 {
+  animation-delay: -0.16s;
+}
+
+@-webkit-keyframes bouncedelay {
+  0%,
+  80%,
+  100% {
+    transform: scale(0.0);
+  }
+  40% {
+    transform: scale(1.0);
+  }
+}
+
+@keyframes bouncedelay {
+  0%,
+  80%,
+  100% {
+    transform: scale(0.0);
+  }
+  40% {
+    transform: scale(1.0);
+  }
+}
+
+
+/* ==========================================================================
+ 4. Main Menu
+ ========================================================================== */
+
+header {
+  position: relative;
+  z-index: 70;
+  width: 100%;
+  margin: 0;
+  padding: 2.4em;
+  background: transparent;
+  &.fixed {
+    top: 0;
+    left: 0;
+    @media (min-width: $tablet) {
+      & {
+        position: fixed;
+      }
+    }
+  }
+  &.background {
+    background: rgba(255, 255, 255, 0.8);
+  }
+  svg {
+    width: 34px;
+    height: 34px;
+  }
+  @media #{$format} {
+    @media (min-width: $full) {
+      & {
+        padding:2.4em 2.4em 1em;
+      }
+    }
+  }
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  button {
+    border: none;
+    outline: none;
+    background: transparent;
+  }
+  >* {
+    flex-grow: 1;
+    flex-basis: 52px;
+    @media #{$format} {
+      @media (min-width: $full) {
+        & {
+          flex-basis:32px;
+        }
+      }
+    }
+  }
+  .navbar-brand {
+    flex-grow: 100;
+  }
+  .icon-menu {
+    margin: 0;
+    padding: 0;
+    text-align: right;
+    svg {
+      width: 30px;
+      height: 24px;
+    }
+  }
+  .navbar-search svg {
+    width: 30px;
+    height: 30px;
+  }
+  @media #{$format} {
+    @media (min-width: $desktop) {
+      .navbar-brand svg {
+        width:26px;
+        height: 26px;
+      }
+      .navbar-search {
+        text-align: right;
+      }
+      .navbar-search svg {
+        width: 20px;
+        height: 20px;
+      }
+      .icon-menu svg {
+        width: 23px;
+        height: 17px;
+      }
+    }
+    @media (min-width: $full) {
+      .navbar-brand svg {
+        width: 17px;
+        height: 17px;
+      }
+      .navbar-search svg {
+        width: 14px;
+        height: 15px;
+      }
+      .icon-menu svg {
+        width: 15px;
+        height: 12px;
+      }
+    }
+  }
+}
+
+
+/* Collapse */
+
+.collapse {
+  position: absolute;
+  z-index: 99999;
+  top: 12px;
+  right: 10px;
+  left: 10px;
+  display: none;
+  margin: 0;
+  padding: 2em 1em;
+  text-align: center;
+  background: $white-color;
+  overflow: hidden;
+  li {
+    list-style: none;
+    a {
+      list-style: none;
+      font-size: 14px;
+      font-weight: normal;
+      transition: color 0.3s ease-in-out;
+      text-decoration: none;
+      display: block;
+      color: $text-color;
+      text-transform: uppercase;
+      padding: 30px;
+      text-align: center;
+      font: $font-bold;
+      &:hover {
+        background: $black-color;
+        color: $white-color;
+      }
+    }
+    @media (min-width: $tablet) {
+      & {
+        display: inline-block;
+      }
+      a {
+        font: $font-normal;
+        display: inline-block;
+        text-align: left;
+        padding: 62px 16px 11px;
+      }
+    }
+  }
+}
+
+.icon-close {
+  position: absolute;
+  top: 4px;
+  right: 0;
+  border: none;
+  margin-right: 0;
+  padding-right: 6px;
+  padding-left: 6px;
+  background: $white-color;
+  outline: none;
+}
+
+.navigation-top {
+  padding: 4em 0;
+  @media (min-width: $tablet) {
+    & {
+      border-bottom: 1px solid #e8e8e8;
+      padding: 0 0 4em;
+    }
+  }
+  ul {
+    margin: 0;
+  }
+  li {
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    a {
+      line-height: 44px;
+    }
+    span {
+      display: block;
+      line-height: 4px;
+    }
+    @media (min-width: $tablet) {
+      & {
+        width: 120px;
+        margin: 0;
+        display: inline-block;
+      }
+    }
+  }
+  svg {
+    display: none;
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    margin-left: -17px;
+    line-height: 44px;
+    @media (min-width: $tablet) {
+      & {
+        display: block;
+      }
+    }
+  }
+}
+
+.navigation-col {
+  ul {
+    margin-left: 0;
+    @media (min-width: 480px) {
+      & {
+        margin-left: 1.4em;
+      }
+    }
+  }
+  li {
+    display: block;
+    margin: 0;
+  }
+}
+
+.navigation {
+  display: none;
+  flex-wrap: wrap;
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0;
+  justify-content: center;
+  @media (min-width: 480px) {
+    & {
+      padding: 5em 0 2em;
+    }
+  }
+  @media (min-width: $tablet) {
+    & {
+      display: flex;
+    }
+  }
+  .navigation-col {
+    text-align: center;
+    flex-grow: 0;
+    flex-basis: 80%;
+    h3 {
+      margin: 0;
+      color: #222;
+      font: $font-normal;
+      font-size: 20px;
+      text-align: center;
+    }
+    a {
+      padding: 11px 16px;
+    }
+    @media (min-width: 480px) {
+      & {
+        text-align: left;
+        flex-basis: 40%;
+      }
+      h3 {
+        margin: 0 0 0 2em;
+        text-align: left;
+      }
+    }
+    @media (min-width: $tablet) {
+      & {
+        flex-basis: 18%;
+      }
+    }
+  }
+}
+
+
+/* ==========================================================================
+5. Section - Hero
+========================================================================== */
+
+.hero {
+  background: url(../img/hero.jpg);
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-size: cover;
+  .hero_text {
+    display: none;
+    text-align: center;
+    h1 {
+      font: $font-bold;
+      font-size: 35px;
+      letter-spacing: 1.8em;
+      line-height: 34px;
+      text-transform: uppercase;
+      color: #fff;
+      margin: 0;
+    }
+    @media #{$format} {
+      @media (min-width: $full) {
+        & {
+          display:block;
+        }
+      }
+    }
+  }
+  .hero-btn {
+    margin: 0;
+    text-align: center;
+    a {
+      padding: 0.3em 0.5em;
+      font-size: 1.875em;
+      @media #{$format} {
+        @media (min-width: $desktop) {
+          & {
+            font-size:1.5em;
+          }
+        }
+        @media (min-width: $desktop) {
+          & {
+            font-size: 1em;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+/* ==========================================================================
+  6. Section - Topic: Team Of Creatives
+  ========================================================================== */
+
+@media #{$format} {
+  @media (min-width: $desktop) {
+    .text-flex {
+      display:flex;
+      >* {
+        width: 50%;
+        flex: 1 50%;
+        order: 1;
+      }
+      .flex-right {
+        order: 2;
+      }
+    }
+    .col {
+      margin: 6em 1em 2em 6em;
+      p {
+        margin: 1em 3em 1em 0;
+      }
+    }
+  }
+  @media (min-width: $full) {
+    .text-flex>* {
+      max-width: 570px;
+    }
+    .text-second {
+      margin-top: 3em;
+      justify-content: flex-end;
+    }
+  }
+}
+
+
+/* ==========================================================================
+  7. Section - Latest Projects
+  ========================================================================== */
+
+.projects {
+  overflow: hidden;
+  padding: 0;
+  background-color: #2c2e37;
+  background-image: linear-gradient(transparent 50%, $white-color 50%);
+  background-size: 100% 100%;
+  h2 {
+    margin-top: 1.8em;
+    color: $white-color;
+  }
+  h2:before {
+    height: 0;
+    background: transparent;
+  }
+}
+
+.vertical {
+  display: block;
+  width: 2px;
+  height: 100px;
+  margin: 0 auto;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2 100" width="2" height="100"><path fill-rule="evenodd" opacity="0.302" fill="rgb(148, 148, 148)" d="M-0.000,-0.000 L1.875,-0.000 L1.875,100.000 L-0.000,100.000 L-0.000,-0.000 Z"></path></svg>') center center no-repeat;
+}
+
+
+/* ==========================================================================
+  8. Section - Blog
+  ========================================================================== */
+
+.blog {
+  min-height: 768px;
+  padding: 636px 0 0;
+  background-color: #f3f3f3;
+  background-image: url("../img/blog-2.jpg"), linear-gradient($white-color 86px, transparent 0);
+  background-repeat: no-repeat;
+  background-position: top center, 100% 100%;
+  img {
+    display: none;
+    width: 350px;
+    height: 350px;
+  }
+  @media #{$format} {
+    @media (min-width: $desktop) {
+      & {
+        background-position: top left 55%, 100% 100%;
+        padding: 200px 0 34px 0;
+      }
+      img {
+        display: block;
+        margin: 4em 0 1em;
+      }
+      .text {
+        h2,
+        p {
+          text-align: left;
+          margin: 1em 1em 1em 6em;
+          max-width: 420px;
+        }
+        h2 {
+          margin: 0 3em;
+          &:before {
+            margin: 0 0 1.7em;
+          }
+        }
+        .btn-inline {
+          text-align: left;
+          margin-left: 5em;
+        }
+      }
+    }
+    @media (min-width: $full) {
+      & {
+        background-position: top right 0, 100% 100%;
+      }
+      .text h2,
+      .text p {
+        margin: 1em 1em 1em 0;
+      }
+    }
+  }
+}
+
+
+/* ==========================================================================
+  9. Section - Profiles
+  ========================================================================== */
+
+.profiles {
+  h2 {
+    margin-bottom: 1.7em;
+  }
+  .panel {
+    padding: 0 2.4em 2.4em;
+    p {
+      margin: 2em 0 0;
+      text-align: left;
+      &.name {
+        font: $font-bold;
+        font-size: 1em;
+        color: $black-color;
+      }
+      &.who {
+        margin: 0.5em 0;
+        font-size: 1.9em;
+        text-transform: uppercase;
+        color: $black-color;
+        font-size: 18px;
+        &:after {
+          display: block;
+          width: 60px;
+          margin: 1.6em 0;
+          content: '';
+          border: 2px solid #d1d1d1;
+        }
+      }
+    }
+  }
+}
+
+@media #{$format} {
+  @media (min-width: $desktop) {
+    .profiles-flex .container {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 0 60px 1em;
+      >* {
+        flex-grow: 1;
+        flex-shrink: 1;
+        flex-basis: 410px;
+      }
+      h2 {
+        flex-basis: 100%;
+        margin-bottom: 4.4em;
+      }
+      .panel {
+        .panel-info {
+          padding: 0 2.8em;
+        }
+        &:nth-child(odd) .panel-info {
+          padding-left: 0;
+        }
+        &:nth-child(even) .panel-info {
+          padding-right: 0;
+        }
+        .who {
+          font-size: 15px;
+        }
+        .social {
+          margin: 1.2em 0;
+        }
+        .icon-facebook {
+          width: 8px;
+          height: 16px;
+          background-size: 8px;
+        }
+        .icon-twitter {
+          width: 18px;
+          height: 16px;
+          background-size: 16px;
+        }
+      }
+    }
+  }
+  @media (min-width: $full) {
+    .profiles-flex .container {
+      padding: 0 0 1em;
+      >* {
+        padding: 0 38px 2.4em;
+        flex-basis: 378px;
+      }
+      h2 {
+        margin-bottom: 2em;
+      }
+      .panel {
+        .panel-info {
+          padding: 0;
+        }
+        &:nth-child(1) {
+          padding-left: 0;
+        }
+        &:nth-child(3n+3) {
+          padding: 0 38px 2.4em;
+        }
+      }
+    }
+  }
+}
+
+
+/* ==========================================================================
+  10. Section - Logos
+  ========================================================================== */
+
+.logos {
+  overflow: hidden;
+  margin: 3em 0 10em;
+  padding: 0;
+  img {
+    display: block;
+    width: 160px;
+    margin: 0 auto;
+  }
+  @media #{$format} {
+    @media (min-width: $desktop) {
+      & {
+        margin: 3em 0 2em;
+      }
+      img {
+        width: unset;
+      }
+    }
+  }
+}
+
+
+/* ==========================================================================
+  11. Footer
+  ========================================================================== */
+
+@import "../components/footer/style";
+
+
+/* ==========================================================================
+  12. Slider
+  ========================================================================== */
+
+@import "../components/slider/style";
+
+
+/* ==========================================================================
+  13. Button
+  ========================================================================== */
+
+.btn,
+.btn:focus,
+.btn:active,
+.btn:visited,
+button,
+a[role="button"],
+input[type="submit"] {
+  display: inline-block;
+  margin: 1.2em;
+  padding: 1em 8%;
+  font: $font-bold;
+  font-size: 1.4em;
+  transition: all 1s;
+  text-transform: uppercase;
+  border-width: 4px;
+  border-style: solid;
+  @media #{$format} {
+    @media (min-width: $desktop) {
+      & {
+        font-size: 12px;
+        padding: 1em 2em;
+      }
+    }
+  }
+}
+
+.btn-inline {
+  text-align: center;
+}
+
+.btn--primary {
+  color: $white-color;
+  border-color: $theme-color;
+  background-color: $theme-color;
+}
+
+.btn--primary:hover {
+  color: $white-color;
+  border-color: $black-color;
+  background-color: $black-color;
+}
+
+.btn--secondary {
+  color: $black-inner-color;
+  border-color: $grey-color;
+  background-color: transparent;
+}
+
+.btn--secondary:hover {
+  color: $white-color;
+  background-color: $black-color;
+}
+
+.btn--tertiary {
+  color: $white-color;
+  border-color: $grey-inner-color;
+  background-color: transparent;
+}
+
+.btn--tertiary:hover {
+  color: $black-color;
+  border-color: $white-color;
+  background-color: $white-color;
+}
+
+
+/* ==========================================================================
+  14. Form
+  ========================================================================== */
+
+::-webkit-input-placeholder {
+  color: $text-color;
+}
+
+:-moz-placeholder {
+  color: $text-color;
+}
+
+::-moz-placeholder {
+  color: $text-color;
+}
+
+:-ms-input-placeholder {
+  color: $text-color;
+}
+
+.subscribe {
+  position: relative;
+  margin: 3em 0;
+}
+
+.formcontrol {
+  width: 100%;
+  padding: 0.7em 0 0.7em 1.2em;
+  font: $font-normal;
+  border: 2px solid $text-color;
+  background: transparent;
+  @media #{$format} {
+    @media (min-width: $tablet) {
+      & {
+        font-size: 1.5em;
+      }
+    }
+    @media (min-width: $desktop) {
+      & {
+        font-size: 1em;
+      }
+    }
+  }
+}
+
+.subs-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: block;
+  width: 21px;
+  height: 21px;
+  margin: 0.7em;
+  padding: 0;
+  cursor: pointer;
+  text-indent: -9999em;
+  border: none;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" opacity="0.102" fill="rgb(255, 255, 255)" d="M10.411,20.999 L21.001,10.499 L10.411,-0.001 L8.300,2.092 L15.295,9.028 L-0.002,9.028 L-0.002,11.970 L15.295,11.970 L8.300,18.907 L10.411,20.999 Z"></path></svg>') center center no-repeat;
+  @media #{$format} {
+    @media (min-width: $tablet) {
+      & {
+        margin:1em;
+      }
+    }
+  }
+}

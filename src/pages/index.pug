@@ -1,0 +1,166 @@
+extends ../templates/default/index
+
+block head_end
+  link(href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet")
+  link(href="https://fonts.googleapis.com/css?family=Raleway:800" rel="stylesheet")
+  link(href="css/style.css" rel="stylesheet")
+
+block content
+
+  // Main Menu
+  header.fixed
+    nav
+      a.navbar-brand(href="/")
+        include ../img/icon-logo.svg
+      a.navbar-search(href="#")
+        include ../img/icon-search.svg
+      button.icon-menu(type="button")
+        include ../img/icon-menu.svg
+    div.collapse
+      button.icon-close(type="button")
+        include ../img/icon-close.svg
+
+      // Navigation Top
+      div.navigation-top
+        ul
+          li.wow.bounceInDown(data-wow-delay=".2s")
+            a(href="#")
+              include ../img/icon-nav-1.svg
+              span Our Story
+          li.wow.bounceInDown(data-wow-delay=".4s")
+            a(href="#")
+              include ../img/icon-nav-2.svg
+              span Services
+          li.wow.bounceInDown(data-wow-delay=".6s")
+            a(href="#")
+              include ../img/icon-nav-3.svg
+              span Work
+          li.wow.bounceInDown(data-wow-delay=".8s")
+            a(href="#")
+              include ../img/icon-nav-4.svg
+              span Journal
+          li.wow.bounceInDown(data-wow-delay="1s")
+            a(href="#")
+              include ../img/icon-nav-5.svg
+              span Contact
+
+      - var i = 0.1;
+
+      // Navigation
+      div.navigation
+        mixin navlist(title,...items)
+          div.navigation-col
+            h3= title
+            ul
+              each item in items
+                li.wow.bounceInUp(data-wow-delay= i + "s")
+                  a(href="#")= item
+                  
+                    - i = i + 0.05
+
+        +navlist('Digital', 'Baxvers', 'Akari Sushi', 'Hopkins Coffee', 'Ibananaboat', 'Eyeywear')
+        +navlist('Print', 'Baxvers', 'Akari Sushi', 'Hopkins Coffee', 'Ibananaboat', 'Eyeywear')
+        +navlist('Mobile', 'Baxvers', 'Akari Sushi', 'Hopkins Coffee', 'Ibananaboat', 'Eyeywear')
+        +navlist('Tablet', 'Baxvers', 'Akari Sushi', 'Hopkins Coffee', 'Ibananaboat', 'Eyeywear')
+
+  // Section - Hero 
+  section.hero.parallax.hero-parallax.page
+    div.container.hero-container
+      div.hero-btn
+        a.btn.btn--primary.wow.fadeInLeft(href="#" data-wow-delay="1s") Inside Our Studio 
+      div.hero_text.wow.fadeInUp(data-wow-delay="1s")
+        h1 Frostbite
+
+  // Section - Topic: Team Of Creatives 
+  section.topic
+    div.container
+      h2.wow.bounceInDown A Team Of Creatives 
+        Span Based Out Of California
+      div.text.text-flex
+        img.flex-right.wow.fadeInRight(src="img/topic-1.jpg" alt="Topic 1" data-wow-duration="1s" data-wow-delay=".5s")
+        div.wow.fadeInLeft(data-wow-duration="1s" data-wow-delay=".3s")
+          h3 Who We Are
+          p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae enim sollicitudin, suscipit enim nec, scelerisque erat. Maecenas placerat vestibulum neque et venenatis. Donec condimentum metus in tempor luctus. 
+      div.text.text-flex.text-second
+        img.wow.fadeInLeft(src="img/topic-2.jpg" alt="Topic 2" data-wow-duration="1s" data-wow-delay=".5s")
+        div.flex-right.wow.fadeInRight(data-wow-duration="1s" data-wow-delay=".7s")
+          h3 What We Do
+          p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae enim sollicitudin, suscipit enim nec, scelerisque erat. Maecenas placerat vestibulum neque et venenatis. Donec condimentum metus in tempor luctus. 
+      hr
+      div.text.text-flex.col
+        p.wow.fadeInUp(data-wow-duration=".5s" data-wow-delay="1s") Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget commodo risus. Nulla placerat nunc nulla, id porta sapien varius sed. In vel est a dui sodales varius. In facilisis, risus non maximus scelerisque, mauris massa vehicula tortor, nec vestibulum ipsum sem et magna. Maecenas in purus ut arcu pellentesque tempus. Curabitur viverra quis ipsum vitae hendrerit. Aenean nec consequat neque, non euismod sapien. Nullam fringilla justo sed consequat pellentesque. Praesent egestas porta vestibulum. 
+        p.flex-right.wow.fadeInUp(data-wow-duration=".5s" data-wow-delay="1.2s") Nullam gravida odio quis ligula hendrerit, a consectetur nulla tincidunt. Ut finibus, quam id sodales tempus, neque diam fringilla lectus, vel ultricies est neque eget metus. Duis id efficitur libero. Etiam facilisis, ipsum volutpat ultrices finibus, orci sem consectetur leo, in blandit ipsum ex vitae lorem. Praesent placerat odio in lectus maximus, vel vehicula nulla scelerisque. Nullam et feugiat nibh. Nullam ultrices libero nec eros commodo, a tempus metus condimentum.
+      div.btn-inline.wow.fadeInUp(data-wow-duration=".5s" data-wow-delay="1.4s")
+        a.btn.btn--primary(href="#" role="button") Journal
+        a.btn.btn--secondary(href="#" role="button") Our Story
+
+  // Section - Latest Projects 
+  hr.vertical.wow.fadeInLeft
+  section.projects
+    hr.vertical.wow.fadeInRight
+    div.container
+      div.wow.bounceIn(data-wow-duration="1s")
+        h2.wow.bounceInDown  latest Projects
+        p Aliquam sed posuere urna, et gravida nisl. Praesent interdum nisl libero, pretium egestas purus eleifend vitae. Mauris suscipit vel lectus at luctus.
+        div.btn-inline
+          a.btn.btn--primary(href="#" role="button") View Projects
+          a.btn.btn--tertiary(href="#" role="button") Contact
+
+      // Slider
+      include ../components/slider/index
+
+  // Section - Blog: Our Journal 
+  section.blog 
+    div.container
+      div.text.text-flex
+        div.flex-right.wow.fadeInRight(data-wow-duration="1s" data-wow-delay=".7s")
+          img(src="img/blog-1.jpg" alt="Blog")
+        div.wow.fadeInLeft(data-wow-duration="1s" data-wow-delay=".5s")
+          h2 Our Journal 
+          p Aliquam sed posuere urna, et gravida nisl. Praesent interdum nisl libero, pretium egestas purus eleifend vitae. Mauris suscipit vel lectus at luctus.
+          div.btn-inline
+            a.btn--primary(href="#" role="button") Read More
+
+  // Section - Profiles: Our Team 
+  section.profiles.profiles-flex
+    div.container
+      h2.wow.bounceInDown Our Team 
+      mixin team(avatar, name, who, info, twitter, facebook)
+        div.panel.wow.fadeInUp(data-wow-delay="0.5s")
+          div.panel-body
+            div.panel-info
+              img.avatar(src="img/"+avatar alt="Avatar")
+              p.name=name
+              p.who=who
+              p.info=info 
+              ul.social
+                li
+                  a(href=twitter)
+                    i.icon-twitter
+                li
+                  a(href=facebook)
+                    i.icon-facebook
+      +team('avatar-1.jpg', 'Adam Smith', 'CEO, Brand director', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae enim sollicitudin, suscipit enim nec, scelerisque erat.', '#', '#')
+      +team('avatar-2.jpg', 'Eric Johnson', 'CEO, Operations director', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae enim sollicitudin, suscipit enim nec, scelerisque erat.', '#', '#')
+      +team('avatar-3.jpg', 'Cecelia Hines', 'photographer', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae enim sollicitudin, suscipit enim nec, scelerisque erat.', '#', '#')
+      +team('avatar-4.jpg', 'Ben Ferguson', 'brand, UI designer', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae enim sollicitudin, suscipit enim nec, scelerisque erat.', '#', '#')
+      +team('avatar-5.jpg', 'Judy Davis', 'ux / ui designer', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae enim sollicitudin, suscipit enim nec, scelerisque erat.', '#', '#')
+      +team('avatar-6.jpg', 'Thomas Peterson', 'project manager', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae enim sollicitudin, suscipit enim nec, scelerisque erat.', '#', '#')
+
+  // Section - Logos 
+  div.section.logos
+    div.container
+      include ../components/router/index
+
+  // Section - Footer 
+  footer.footer-flex
+    div.container
+      include ../components/footer/index
+
+  script(src="https://code.jquery.com/jquery-1.11.0.min.js")
+  script(src="js/app.min.js")
+  script(src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js")
+  script.
+      new WOW().init()
+
+block body_end

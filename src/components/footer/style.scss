@@ -1,0 +1,140 @@
+footer {
+  padding: 2em 2.4em;
+  background: #2c2e37;
+  overflow: hidden;
+  .newsletter {
+    margin: 2em 0 0;
+    order: 1;
+    h5,
+    p {
+      margin: 1em 0 0;
+      text-align: left;
+      color: $white-color;
+    }
+    h5 {
+      font: $font-normal;
+    }
+  }
+  @media #{$format} {
+    @media (min-width: $tablet) {
+      & {
+        padding: 3em 2.4em 1em;
+      }
+      .newsletter h5 {
+        font-size: 1.5em;
+      }
+    }
+    @media (min-width: $desktop) {
+      & {
+        padding: 0 2.4em 1em;
+      }
+      .newsletter h5 {
+        font-size: 1em;
+      }
+    }
+  }
+  .social {
+    order: 2;
+  }
+  svg {
+    display: block;
+    width: 34px;
+    height: 34px;
+  }
+  .icon-social {
+    fill: $white-color;
+  }
+  ul {
+    display: inline-block;
+    margin: 2em 0 0;
+    padding: 0;
+    list-style: none;
+    li {
+      margin: 1em 0;
+    }
+    @media #{$format} {
+      @media (min-width: $tablet) {
+        & {
+          margin:6.2em 0 0;
+        }
+        li {
+          margin: 1em 0 2.8em;
+        }
+      }
+    }
+  }
+  a {
+    font-size: 1.5em;
+    color: $white-color;
+  }
+  .text-color a {
+    color: $text-color;
+  }
+}
+
+@media #{$format} {
+  @media (min-width: $desktop) {
+    .footer-flex .container {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 3.6em 2.4em 1em;
+      >* {
+        flex-grow: 1;
+        flex-shrink: 1;
+        flex-basis: 104px;
+        min-width: unset;
+        margin: 0;
+      }
+      ul li {
+        margin: 1em 0;
+      }
+      svg {
+        width: 26px;
+        height: 26px;
+        margin: 1em;
+        path {
+          fill: $white-color;
+        }
+      }
+      .social {
+        flex-basis: 100%;
+        text-align: center;
+        svg {
+          width: 18px;
+          height: 16px;
+        }
+      }
+      a {
+        font-size: 1em;
+        color: $white-color;
+      }
+      .newsletter {
+        margin: 0;
+        flex-basis: 358px;
+      }
+      .subscribe {
+        margin: 1em 0;
+      }
+      .subs-btn {
+        margin: 1em;
+      }
+    }
+  }
+  @media (min-width: $full) {
+    .footer-flex .container {
+      padding: 4em 0 1em;
+      .social {
+        flex-basis: 104px;
+        order: 0;
+        svg {
+          margin: 0 1em;
+        }
+      }
+      svg {
+        width: 17px;
+        height: 17px;
+        flex-basis: 80px;
+      }
+    }
+  }
+}

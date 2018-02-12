@@ -1,0 +1,307 @@
+.slider {
+  margin: 4.6em 0 0;
+}
+
+.slider_one_big_picture {
+  /*  height --> JS */
+  position: relative;
+  user-select: none;
+  >* {
+    transition: ease all 1s;
+  }
+  .next1 {
+    position: absolute;
+    z-index: 9;
+    top: 10%;
+    left: 46%;
+    display: none;
+    width: 450px;
+    height: 450px;
+    margin-left: 220px;
+    opacity: 1;
+    @media #{$format} {
+      @media (min-width: $desktop) {
+        & {
+          display:block;
+        }
+      }
+      @media (min-width: $full) {
+        & {
+          top: 7%;
+          left: 40%;
+        }
+      }
+    }
+  }
+  .prev1,
+  h4,
+  p,
+  i {
+    display: none;
+  }
+  >.active {
+    z-index: 50;
+    top: 0;
+    width: 100%;
+    opacity: 1;
+    @include align(true,
+    false);
+    h4,
+    p,
+    i {
+      display: block;
+      margin: 2.6em 0 0;
+      text-align: center;
+    }
+    p {
+      margin: 1em 0;
+    }
+    i {
+      margin: 1.5em;
+      font-size: 14px;
+      color: $text-color;
+      @media #{$format} {
+        @media (min-width: $tablet) {
+          & {
+            font-size:24px;
+          }
+        }
+      }
+    }
+    @media #{$format} {
+      @media (min-width: $tablet) {
+        & {
+          width:600px;
+          height: 600px;
+        }
+      }
+      @media (min-width: $desktop) {
+        h4,
+        p,
+        i {
+          margin: 2.6em 0 0 5em;
+          text-align: left;
+        }
+        p {
+          margin-left: 9em;
+        }
+        i {
+          margin-bottom: 6em;
+          margin-left: 9em;
+          font-size: 14px;
+        }
+      }
+      @media (min-width: $full) {
+        & {
+          left: 30px;
+          transform: translate(0, 0);
+        }
+        h4,
+        p,
+        i {
+          margin: 1em 9% 30px 0;
+        }
+        i {
+          margin: 3em 9% 60px 0;
+        }
+      }
+    }
+  }
+  i:before {
+    display: inline-block;
+    width: 27px;
+    height: 27px;
+    margin-right: 20px;
+    content: '';
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14"><path fill-rule="evenodd" fill="rgb(148, 148, 148)" d="M6.925,0.313 C3.329,0.313 0.426,3.217 0.426,6.813 C0.426,10.409 3.329,13.313 6.925,13.313 C10.521,13.313 13.425,10.409 13.425,6.813 C13.425,3.217 10.521,0.313 6.925,0.313 ZM9.799,9.686 L6.338,7.731 C6.278,7.686 6.218,7.640 6.158,7.580 C5.947,7.370 5.842,7.084 5.842,6.813 L5.842,1.938 L6.925,1.938 L7.918,6.271 L10.566,8.920 L9.799,9.686 Z"></path></svg>') center center no-repeat;
+    @media #{$format} {
+      @media (min-width: $desktop) {
+        & {
+          width:14px;
+          height: 14px;
+        }
+      }
+    }
+  }
+  .nav_indicators {
+    position: absolute;
+    z-index: 50000;
+    display: none;
+    text-align: right;
+    opacity: 1;
+    &:before {
+      display: inline-block;
+      width: 402px;
+      height: 18px;
+      content: '';
+      border-top: 1px solid #ccc;
+      @media #{$format} {
+        @media (min-width: $desktop) {
+          & {
+            width:179px;
+          }
+        }
+        @media (min-width: $full) {
+          & {
+            width: 402px;
+          }
+        }
+      }
+    }
+    ul {
+      display: inline-block;
+      margin: 0 auto;
+      padding: 0;
+      li {
+        display: inline-block;
+        overflow: hidden;
+        width: 20px;
+        height: 20px;
+        margin: 10px;
+        padding: 0;
+        cursor: pointer;
+        color: #d6d6d6;
+        &.active {
+          position: relative;
+          display: inline-block;
+          width: 20px;
+          height: 20px;
+          margin: 10px;
+          padding: 0;
+          cursor: pointer;
+          color: #6d6e75;
+        }
+      }
+    }
+    @media #{$format} {
+      @media (min-width: $desktop) {
+        & {
+          bottom:20%;
+          left: 0;
+          display: block;
+        }
+      }
+      @media (min-width: $full) {
+        & {
+          right: 30px;
+          left: unset;
+          bottom: 12em;
+        }
+      }
+    }
+  }
+  .next_button,
+  .prev_button {
+    position: absolute;
+    z-index: 51;
+    top: 34%;
+    right: 26px;
+    display: block;
+    width: 21px;
+    height: 21px;
+    cursor: pointer;
+    text-indent: -9999em;
+    border: none;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10"><path fill-rule="evenodd" opacity="0.5" fill="rgb(34, 34, 34)" d="M4.880,-0.003 L10.004,5.005 L4.880,10.012 L3.416,8.581 L6.041,6.016 L-0.001,6.016 L-0.001,3.993 L6.041,3.993 L3.416,1.428 L4.880,-0.003 Z"></path></svg>') center center no-repeat;
+    @media #{$format} {
+      @media (min-width: $full) {
+        & {
+          right:-76px;
+          width: 10px;
+          height: 10px;
+        }
+      }
+    }
+  }
+  .prev_button {
+    left: 26px;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10"><path fill-rule="evenodd" opacity="0.5" fill="rgb(34, 34, 34)" d="M5.120,10.003 L-0.004,4.995 L5.120,-0.012 L6.584,1.419 L3.959,3.984 L10.001,3.984 L10.001,6.007 L3.959,6.007 L6.584,8.572 L5.120,10.003 Z"></path></svg>') center center no-repeat;
+    @media #{$format} {
+      @media (min-width: $full) {
+        & {
+          left:-76px;
+        }
+      }
+    }
+  }
+}
+
+
+/* ------------------- */
+
+.slider_in_line {
+  position: relative;
+  width: 1280px;
+  height: 58px;
+  margin: 0 auto;
+  user-select: none;
+  >* {
+    transition: ease all 1s;
+  }
+  .hidden {
+    z-index: 0;
+    top: 0px;
+    left: 50%;
+    opacity: 0;
+  }
+  .active,
+  .next1,
+  .next2,
+  .next3,
+  .next4,
+  .next5,
+  .next6,
+  .prev1 {
+    position: absolute;
+    z-index: 10;
+    top: 0px;
+    left: 16%;
+    width: 16%;
+    height: 100%;
+    margin: 0 0.5%;
+  }
+  .next1 {
+    left: 32%;
+  }
+  .next2 {
+    left: 48%;
+  }
+  .next3 {
+    left: 64%;
+  }
+  .next4 {
+    z-index: 0;
+    left: 80%;
+  }
+  .prev1 {
+    position: absolute;
+    z-index: 10;
+    top: 0px;
+    left: 0%;
+    width: 15%;
+    height: 100%;
+    opacity: 1;
+  }
+  .prev2,
+  .prev3,
+  .prev4,
+  .prev5,
+  .prev6 {
+    position: absolute;
+    z-index: 0;
+    top: 0px;
+    left: 0%;
+    width: 0%;
+    height: 100%;
+    opacity: 0;
+  }
+}
+
+
+/* ------------------- */
+
+div.slider>div:not(.nav_indicators):not(.next_button):not(.prev_button) {
+  box-sizing: border-box;
+  text-align: center;
+  background: #fff;
+}

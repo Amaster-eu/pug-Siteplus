@@ -1,0 +1,13 @@
+div.slider.slider_one_big_picture.wow.fadeInUp(data-wow-duration="1s" data-wow-delay=".5s")
+  mixin slider(slide, title, text, time)
+    div
+      img(src="img/"+slide alt="Slide")
+      h4.wow.fadeInLeft(data-wow-delay=".5s")= title
+      p.wow.fadeInLeft(data-wow-delay=".7s")= text
+      i.wow.fadeInLeft(data-wow-delay=".9s")= time
+  +slider('slide-1.jpg', 'case studies', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ac odio quis augue iaculis aliquam tristique id sapien. Proin ultricies tortor porta, volutpat sapien nec, endrerit ligula. Ut id ipsum eu leo maximus rutrum.', '4 hours ago - by Andrew B.')
+  +slider('slide-2.jpg', 'case studies', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ac odio quis augue iaculis aliquam tristique id sapien. Proin ultricies tortor porta, volutpat sapien nec, endrerit ligula. Ut id ipsum eu leo maximus rutrum.', '5 hours ago - by Bobe T.')
+  +slider('slide-3.jpg', 'case studies', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ac odio quis augue iaculis aliquam tristique id sapien. Proin ultricies tortor porta, volutpat sapien nec, endrerit ligula. Ut id ipsum eu leo maximus rutrum.', '6 hours ago - by Anna G.')
+  div.next_button NEXT
+  div.prev_button PREV
+  div.nav_indicators

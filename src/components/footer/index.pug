@@ -1,0 +1,30 @@
+include ../../img/icon-logo.svg
+ul.text-color.wow.fadeInUp(data-wow-duration=".5s" data-wow-delay="1s")
+  mixin footerlist1(item, link)
+    li 
+      a(href=link)= item
+  +footerlist1('Our Team', '#')
+  +footerlist1('Contact Us', '#')
+  +footerlist1('Support', '#')
+  +footerlist1('Blog', '#')
+ul.wow.fadeInUp(data-wow-duration=".5s" data-wow-delay="1.2s")
+  mixin footerlist2(item, link)
+    li 
+      a(href=link)= item
+  +footerlist2('Exclusive Offers', '#')
+  +footerlist2('Licencing', '#')
+  +footerlist2('Privacy Policy', '#')
+  +footerlist2('Refund Policy', '#')
+div.newsletter.wow.fadeInUp(data-wow-duration=".5s" data-wow-delay="1.6s")
+  h5 Join Our newsletter
+  p Join up and get notified about new products, updates and special offers.
+  form.subscribe
+    input.required.email.formcontrol(type="email" value="" name="email" placeholder="Enter your email")
+    button.subs-btn(type="submit")
+ul.social.wow.fadeInUp(data-wow-duration=".5s" data-wow-delay="1.4s")
+  li
+    a(href="#")
+      include ../../img/icon-facebook.svg
+  li
+    a(href="#")
+      include ../../img/icon-twitter.svg
