@@ -23,7 +23,9 @@
 ## Комментарии к макету
 
 - слайдер #1: при слайде первое изображение исчезает, след. - смещается на его позиции и увеличивается, описание меняется, пагинация переключается
+
 ![pic](https://github.com/Amaster-eu/pug-Siteplus/blob/master/src/img/slider-big.gif)
+
 - слайдер #2: логотипы компаний скролятся автоматически:
 ![pic](https://github.com/Amaster-eu/pug-Siteplus/blob/master/src/img/slider-small.gif)
 - добавлена анимация элементов и параллакс-эффект

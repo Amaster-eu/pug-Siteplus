@@ -23,7 +23,9 @@ You can play around with code demo [here](https://amaster.eu/demo/pug-Siteplus/)
 ## Comments on the layout:
 
 - slider #1: with the slide, the first image disappears, next. - shifts to its position and increases, the description changes, the pagination switches:
+
 ![pic](https://github.com/Amaster-eu/pug-Siteplus/blob/master/src/img/slider-big.gif)
+
 - slider #2: auto-scrolling company logos:
 ![pic](https://github.com/Amaster-eu/pug-Siteplus/blob/master/src/img/slider-small.gif)
 - added animation elements, parallax
