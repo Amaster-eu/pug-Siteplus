@@ -3,8 +3,11 @@
 ## Description
 
 Created an adaptive layout using Flexbox grid system without CSS media queries for rebuilding.
+
 Used a SCSS preprocessor, define the main colors, fonts in variables. Also used imports, mixins.
+
 Used the Pug template with inclusions, templates, mixins, variables.
+
 Used HTML5 markup and semantics. The W3C Validator showed no errors.
 
 ![preview](https://github.com/Amaster-eu/pug-Siteplus/blob/master/src/img/intro.jpg)
